@@ -1,0 +1,533 @@
+{
+  "id": "826c17fe-ff3e-4e79-bacb-84bf41112a51",
+  "revision": 0,
+  "last_node_id": 31,
+  "last_link_id": 59,
+  "nodes": [
+    {
+      "id": 29,
+      "type": "MarigoldDepthEstimation_v2",
+      "pos": [
+        1204.529296875,
+        243.19760131835938
+      ],
+      "size": [
+        280.6666564941406,
+        246
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "marigold_model",
+          "type": "MARIGOLDMODEL",
+          "link": 55
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-marigold",
+        "ver": "1894ff2fd35c22f96c701067729237168b5f2ef5",
+        "Node name for S&R": "MarigoldDepthEstimation_v2"
+      },
+      "widgets_values": [
+        667250636440584,
+        "randomize",
+        4,
+        3,
+        768,
+        "LCMScheduler",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 27,
+      "type": "MarigoldModelLoader",
+      "pos": [
+        812.81396484375,
+        145.8820343017578
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "marigold_model",
+          "type": "MARIGOLDMODEL",
+          "links": [
+            50,
+            55
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-marigold",
+        "ver": "1894ff2fd35c22f96c701067729237168b5f2ef5",
+        "Node name for S&R": "MarigoldModelLoader"
+      },
+      "widgets_values": [
+        "prs-eth/marigold-v1-0"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "BiRefNet",
+      "pos": [
+        1163.9371337890625,
+        545.3812255859375
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "slot_index": 0,
+          "links": [
+            2,
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-birefnet",
+        "ver": "484c90b74c5229206e1f0573e594434eac4ca151",
+        "Node name for S&R": "BiRefNet"
+      },
+      "widgets_values": [
+        "cpu"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "PreviewImage",
+      "pos": [
+        1551.8359375,
+        -103.53396606445312
+      ],
+      "size": [
+        140,
+        246.00001525878906
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 26,
+      "type": "MarigoldDepthEstimation_v2",
+      "pos": [
+        1946.9906005859375,
+        149.8330535888672
+      ],
+      "size": [
+        280.6666564941406,
+        246
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "marigold_model",
+          "type": "MARIGOLDMODEL",
+          "link": 50
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-marigold",
+        "ver": "1894ff2fd35c22f96c701067729237168b5f2ef5",
+        "Node name for S&R": "MarigoldDepthEstimation_v2"
+      },
+      "widgets_values": [
+        481372773379896,
+        "randomize",
+        4,
+        3,
+        768,
+        "LCMScheduler",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 3,
+      "type": "MaskToImage",
+      "pos": [
+        1518.52783203125,
+        545.0921020507812
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            38,
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "MaskToImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 30,
+      "type": "ImageComposite+",
+      "pos": [
+        1847.703369140625,
+        506.3109436035156
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 57
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 58
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "1.1.0",
+        "Node name for S&R": "ImageComposite+"
+      },
+      "widgets_values": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        807.5294799804688,
+        262.51708984375
+      ],
+      "size": [
+        315,
+        314.0000305175781
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            1,
+            54,
+            58
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "IMG_1802 (1).png",
+        "image"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "PreviewImage",
+      "pos": [
+        2276.526123046875,
+        149.19313049316406
+      ],
+      "size": [
+        140,
+        246.00003051757812
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "PreviewImage",
+      "pos": [
+        1782.2147216796875,
+        -102.7122802734375
+      ],
+      "size": [
+        140,
+        246.00003051757812
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 38
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 31,
+      "type": "Note",
+      "pos": [
+        806.934326171875,
+        -96.78585815429688
+      ],
+      "size": [
+        442.4244384765625,
+        180.80001831054688
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "This workflow automatically detects subjects and creates a mask and cuts the subjects out the image and combines them with the black background from the mask to feed into Marigold to produce a depth map just for the subjects.\n\nIt uses Marigold V2 and BiRefNet segmentation.\n\nThis method does not work with DepthAnywhereV2 very well sadly, as it places a glow around masked subjects where there is no background. Hopefully this will save someone a little effort.\n\nTim / Fyrby Additive"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "MASK"
+    ],
+    [
+      38,
+      3,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      27,
+      0,
+      26,
+      0,
+      "MARIGOLDMODEL"
+    ],
+    [
+      51,
+      26,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      29,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      2,
+      0,
+      29,
+      1,
+      "IMAGE"
+    ],
+    [
+      55,
+      27,
+      0,
+      29,
+      0,
+      "MARIGOLDMODEL"
+    ],
+    [
+      56,
+      30,
+      0,
+      26,
+      1,
+      "IMAGE"
+    ],
+    [
+      57,
+      3,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      58,
+      2,
+      0,
+      30,
+      1,
+      "IMAGE"
+    ],
+    [
+      59,
+      1,
+      0,
+      30,
+      2,
+      "MASK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.18.9"
+  },
+  "version": 0.4
+}
