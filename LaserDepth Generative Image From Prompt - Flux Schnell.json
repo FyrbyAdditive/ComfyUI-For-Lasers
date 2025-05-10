@@ -551,7 +551,8 @@
         "cnr_id": "comfy-core",
         "ver": "0.3.33",
         "Node name for S&R": "ImageUpscaleWithModel"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 43,
@@ -593,37 +594,8 @@
         "cnr_id": "comfy-core",
         "ver": "0.3.33",
         "Node name for S&R": "ImageUpscaleWithModel"
-      }
-    },
-    {
-      "id": 48,
-      "type": "SaveImage",
-      "pos": [
-        2503.7880859375,
-        33.95798110961914
-      ],
-      "size": [
-        270,
-        270
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 69
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33"
       },
-      "widgets_values": [
-        "LaserDepth-Depth"
-      ]
+      "widgets_values": []
     },
     {
       "id": 49,
@@ -653,6 +625,36 @@
       },
       "widgets_values": [
         "LaserDepth-Image"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "SaveImage",
+      "pos": [
+        2503.7880859375,
+        33.95798110961914
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 69
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Depth"
       ]
     }
   ],
