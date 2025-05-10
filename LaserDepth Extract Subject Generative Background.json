@@ -1,8 +1,8 @@
 {
   "id": "cea65ab1-d6dc-4e70-9d65-23e60a5d8749",
   "revision": 0,
-  "last_node_id": 89,
-  "last_link_id": 150,
+  "last_node_id": 91,
+  "last_link_id": 152,
   "nodes": [
     {
       "id": 35,
@@ -233,7 +233,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        593420416902599,
+        614328564392241,
         "randomize",
         20,
         4.01,
@@ -335,7 +335,7 @@
         "Node name for S&R": "MarigoldDepthEstimation_v2"
       },
       "widgets_values": [
-        592688747923430,
+        767610269044824,
         "randomize",
         4,
         3,
@@ -811,7 +811,7 @@
         "Node name for S&R": "MarigoldDepthEstimation_v2"
       },
       "widgets_values": [
-        478165697097395,
+        742794394337689,
         "randomize",
         4,
         3,
@@ -1008,35 +1008,6 @@
           "name": "images",
           "type": "IMAGE",
           "link": 128
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 65,
-      "type": "PreviewImage",
-      "pos": [
-        3645.093994140625,
-        -548.2102661132812
-      ],
-      "size": [
-        140,
-        246.00003051757812
-      ],
-      "flags": {},
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 107
         }
       ],
       "outputs": [],
@@ -1429,179 +1400,6 @@
       ]
     },
     {
-      "id": 80,
-      "type": "PreviewImage",
-      "pos": [
-        3645.400634765625,
-        -221.39419555664062
-      ],
-      "size": [
-        140,
-        246.00003051757812
-      ],
-      "flags": {},
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 135
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 87,
-      "type": "ImageUpscaleWithModel",
-      "pos": [
-        4166.90087890625,
-        -239.85598754882812
-      ],
-      "size": [
-        226.8000030517578,
-        46
-      ],
-      "flags": {},
-      "order": 36,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 150
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 147
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            148
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "ImageUpscaleWithModel"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 88,
-      "type": "PreviewImage",
-      "pos": [
-        4450.25341796875,
-        -240.32350158691406
-      ],
-      "size": [
-        140,
-        246.00003051757812
-      ],
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 148
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 89,
-      "type": "PreviewImage",
-      "pos": [
-        4449.365234375,
-        -564.9172973632812
-      ],
-      "size": [
-        140,
-        246.00003051757812
-      ],
-      "flags": {},
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 149
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 84,
-      "type": "ImageUpscaleWithModel",
-      "pos": [
-        4163.63525390625,
-        -565.2022094726562
-      ],
-      "size": [
-        226.8000030517578,
-        46
-      ],
-      "flags": {},
-      "order": 38,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 144
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 145
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            149
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "ImageUpscaleWithModel"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 2,
       "type": "LoadImage",
       "pos": [
@@ -1644,6 +1442,29 @@
       ]
     },
     {
+      "id": 31,
+      "type": "Note",
+      "pos": [
+        618.8057861328125,
+        -219.36444091796875
+      ],
+      "size": [
+        473.23291015625,
+        180.14451599121094
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "This workflow automatically detects subjects and creates a mask and cuts the subjects out the image and separately makes a background image generated using SD3.5 Simple.\n\nDepth maps of these are generated separately, and then the images and depth maps are merged into output files.\n\nFinally, these are upscaled by 4x. There is a separate version of this workflow in git that does not upscale the images.\n\nThis uses SD3.5 Simple, Marigold V2 and BiRefNetII and some other bits.\n\nTim / Fyrby Additive"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 60,
       "type": "CLIPTextEncode",
       "pos": [
@@ -1681,40 +1502,75 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "a background image of spaced out dancing three dimensional fat people"
+        "A background image containing a diagonal pattern of three dimensional lotus flowers"
       ],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
-      "id": 31,
-      "type": "Note",
+      "id": 65,
+      "type": "PreviewImage",
       "pos": [
-        618.8057861328125,
-        -219.36444091796875
+        3520.23486328125,
+        -547.467041015625
       ],
       "size": [
-        473.23291015625,
-        180.14451599121094
+        140,
+        246.00003051757812
       ],
       "flags": {},
-      "order": 6,
+      "order": 37,
       "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "This workflow automatically detects subjects and creates a mask and cuts the subjects out the image and separately makes a background image generated using SD3.5 Simple.\n\nDepth maps of these are generated separately, and then the images and depth maps are merged into output files.\n\nFinally, these are upscaled by 4x. There is a separate version of this workflow in git that does not upscale the images.\n\nThis uses SD3.5 Simple, Marigold V2 and BiRefNetII and some other bits.\n\nTim / Fyrby Additive"
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 107
+        }
       ],
-      "color": "#432",
-      "bgcolor": "#653"
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 80,
+      "type": "PreviewImage",
+      "pos": [
+        3524.99951171875,
+        -222.137451171875
+      ],
+      "size": [
+        140,
+        246.00003051757812
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 135
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
     },
     {
       "id": 85,
       "type": "UpscaleModelLoader",
       "pos": [
-        3815.503662109375,
-        -411.49176025390625
+        3340.584228515625,
+        -668.6448364257812
       ],
       "size": [
         315,
@@ -1749,6 +1605,152 @@
       },
       "widgets_values": [
         "RealESRGAN_x4plus.pth"
+      ]
+    },
+    {
+      "id": 84,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        3700.6162109375,
+        -566.6886596679688
+      ],
+      "size": [
+        226.8000030517578,
+        46
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 144
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 145
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            151
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 87,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        3706.751220703125,
+        -243.4426727294922
+      ],
+      "size": [
+        226.8000030517578,
+        46
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 150
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 90,
+      "type": "SaveImage",
+      "pos": [
+        3970.281982421875,
+        -567.0889282226562
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 151
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Depth"
+      ]
+    },
+    {
+      "id": 91,
+      "type": "SaveImage",
+      "pos": [
+        3971.3330078125,
+        -242.53274536132812
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 152
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Image"
       ]
     }
   ],
@@ -2226,28 +2228,28 @@
       "IMAGE"
     ],
     [
-      148,
-      87,
-      0,
-      88,
-      0,
-      "IMAGE"
-    ],
-    [
-      149,
-      84,
-      0,
-      89,
-      0,
-      "IMAGE"
-    ],
-    [
       150,
       85,
       0,
       87,
       0,
       "UPSCALE_MODEL"
+    ],
+    [
+      151,
+      84,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      152,
+      87,
+      0,
+      91,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],

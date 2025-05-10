@@ -1,8 +1,8 @@
 {
-  "id": "01d66ae9-78be-4a8d-b737-24eee5e1d447",
+  "id": "885a588a-fe36-42c5-aec5-b8170e3324ab",
   "revision": 0,
-  "last_node_id": 89,
-  "last_link_id": 176,
+  "last_node_id": 91,
+  "last_link_id": 178,
   "nodes": [
     {
       "id": 53,
@@ -357,99 +357,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 76,
-      "type": "UNETLoader",
-      "pos": [
-        180,
-        -100
-      ],
-      "size": [
-        280,
-        82
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            166
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "UNETLoader",
-        "models": [
-          {
-            "name": "hidream_i1_fast_fp8.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/diffusion_models/hidream_i1_fast_fp8.safetensors?download=true",
-            "directory": "diffusion_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "hidream_i1_fast_fp8.safetensors",
-        "default"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 16,
-      "type": "CLIPTextEncode",
-      "pos": [
-        520,
-        -30
-      ],
-      "size": [
-        350,
-        170
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 111
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            21
-          ]
-        }
-      ],
-      "title": "Positive Prompt",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.28",
-        "Node name for S&R": "CLIPTextEncode",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "A lo-fi, grungy wide shot of a ragged large red tree leaning slightly to one side Polaroid aesthetic. the tree is alone in a desolate landscape, the tree is illuminated by a red light, the background is pitch black"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 3,
       "type": "KSampler",
       "pos": [
@@ -508,7 +415,7 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        1099565108703979,
+        185021056256973,
         "randomize",
         16,
         1,
@@ -558,7 +465,7 @@
         58
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -591,7 +498,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -746,46 +653,127 @@
       "widgets_values": []
     },
     {
-      "id": 87,
-      "type": "ImageUpscaleWithModel",
+      "id": 76,
+      "type": "UNETLoader",
       "pos": [
-        2261.466064453125,
-        640.9505004882812
+        180,
+        -100
       ],
       "size": [
-        226.8000030517578,
-        46
+        280,
+        82
       ],
       "flags": {},
-      "order": 19,
+      "order": 9,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 172
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 173
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            175
+            166
           ]
         }
       ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.33",
-        "Node name for S&R": "ImageUpscaleWithModel"
-      }
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "hidream_i1_fast_fp8.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/diffusion_models/hidream_i1_fast_fp8.safetensors?download=true",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "hidream_i1_fast_fp8.safetensors",
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 16,
+      "type": "CLIPTextEncode",
+      "pos": [
+        520,
+        -30
+      ],
+      "size": [
+        350,
+        170
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 111
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            21
+          ]
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.28",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "A background image containing a diagonal pattern of three dimensional lotus flowers"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 90,
+      "type": "SaveImage",
+      "pos": [
+        2522.984130859375,
+        317.00421142578125
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 177
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Image"
+      ]
     },
     {
       "id": 86,
@@ -819,7 +807,7 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            176
+            177
           ]
         }
       ],
@@ -827,47 +815,62 @@
         "cnr_id": "comfy-core",
         "ver": "0.3.33",
         "Node name for S&R": "ImageUpscaleWithModel"
-      }
-    },
-    {
-      "id": 88,
-      "type": "PreviewImage",
-      "pos": [
-        2563.483642578125,
-        315.60418701171875
-      ],
-      "size": [
-        140,
-        246
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 176
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
       },
       "widgets_values": []
     },
     {
-      "id": 89,
-      "type": "PreviewImage",
+      "id": 87,
+      "type": "ImageUpscaleWithModel",
       "pos": [
-        2563.48095703125,
-        640.4149780273438
+        2261.466064453125,
+        640.9505004882812
       ],
       "size": [
-        140,
-        246
+        226.8000030517578,
+        46
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 172
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 91,
+      "type": "SaveImage",
+      "pos": [
+        2525.554931640625,
+        641.3682861328125
+      ],
+      "size": [
+        270,
+        58
       ],
       "flags": {},
       "order": 21,
@@ -876,16 +879,17 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 175
+          "link": 178
         }
       ],
       "outputs": [],
       "properties": {
         "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
+        "ver": "0.3.33"
       },
-      "widgets_values": []
+      "widgets_values": [
+        "LaserDepth-Depth"
+      ]
     }
   ],
   "links": [
@@ -1026,18 +1030,18 @@
       "IMAGE"
     ],
     [
-      175,
-      87,
+      177,
+      86,
       0,
-      89,
+      90,
       0,
       "IMAGE"
     ],
     [
-      176,
-      86,
+      178,
+      87,
       0,
-      88,
+      91,
       0,
       "IMAGE"
     ]
