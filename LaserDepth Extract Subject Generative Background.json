@@ -2,7 +2,7 @@
   "id": "cea65ab1-d6dc-4e70-9d65-23e60a5d8749",
   "revision": 0,
   "last_node_id": 89,
-  "last_link_id": 149,
+  "last_link_id": 150,
   "nodes": [
     {
       "id": 35,
@@ -53,7 +53,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -82,7 +82,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -111,7 +111,7 @@
         26
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -150,7 +150,7 @@
         192
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -193,7 +193,7 @@
         262
       ],
       "flags": {},
-      "order": 29,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -305,7 +305,7 @@
         246
       ],
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -357,7 +357,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -420,7 +420,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 31,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -449,7 +449,7 @@
         146
       ],
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -501,7 +501,7 @@
         66
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -554,7 +554,7 @@
         66
       ],
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -602,7 +602,7 @@
         78
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -646,7 +646,7 @@
         78
       ],
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -690,7 +690,7 @@
         78
       ],
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -734,7 +734,7 @@
         66
       ],
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -781,7 +781,7 @@
         246
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -901,7 +901,7 @@
         66
       ],
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -948,7 +948,7 @@
         106
       ],
       "flags": {},
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1001,7 +1001,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1030,7 +1030,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 38,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1059,7 +1059,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1088,7 +1088,7 @@
         46
       ],
       "flags": {},
-      "order": 30,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1133,7 +1133,7 @@
         218
       ],
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1210,7 +1210,7 @@
         46
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -1264,7 +1264,7 @@
         218
       ],
       "flags": {},
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1334,7 +1334,7 @@
         146
       ],
       "flags": {},
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1376,47 +1376,6 @@
       ]
     },
     {
-      "id": 85,
-      "type": "UpscaleModelLoader",
-      "pos": [
-        3820.63623046875,
-        -608.2025146484375
-      ],
-      "size": [
-        315,
-        58
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "slot_index": 0,
-          "links": [
-            144
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "UpscaleModelLoader",
-        "models": [
-          {
-            "name": "RealESRGAN_x4plus.pth",
-            "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
-            "directory": "upscale_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "RealESRGAN_x4plus.pth"
-      ]
-    },
-    {
       "id": 81,
       "type": "ImageCompositeMasked",
       "pos": [
@@ -1428,7 +1387,7 @@
         146
       ],
       "flags": {},
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1470,47 +1429,6 @@
       ]
     },
     {
-      "id": 86,
-      "type": "UpscaleModelLoader",
-      "pos": [
-        3823.9013671875,
-        -282.8561706542969
-      ],
-      "size": [
-        315,
-        58
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "slot_index": 0,
-          "links": [
-            146
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "UpscaleModelLoader",
-        "models": [
-          {
-            "name": "RealESRGAN_x4plus.pth",
-            "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
-            "directory": "upscale_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "RealESRGAN_x4plus.pth"
-      ]
-    },
-    {
       "id": 80,
       "type": "PreviewImage",
       "pos": [
@@ -1522,7 +1440,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1551,13 +1469,13 @@
         46
       ],
       "flags": {},
-      "order": 37,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
           "name": "upscale_model",
           "type": "UPSCALE_MODEL",
-          "link": 146
+          "link": 150
         },
         {
           "name": "image",
@@ -1594,7 +1512,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 40,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1623,7 +1541,7 @@
         246.00003051757812
       ],
       "flags": {},
-      "order": 41,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -1652,7 +1570,7 @@
         46
       ],
       "flags": {},
-      "order": 39,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1695,7 +1613,7 @@
         314.0000305175781
       ],
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1737,7 +1655,7 @@
         192
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -1780,7 +1698,7 @@
         180.14451599121094
       ],
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1790,6 +1708,48 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 85,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        3815.503662109375,
+        -411.49176025390625
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "slot_index": 0,
+          "links": [
+            144,
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "UpscaleModelLoader",
+        "models": [
+          {
+            "name": "RealESRGAN_x4plus.pth",
+            "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+            "directory": "upscale_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "RealESRGAN_x4plus.pth"
+      ]
     }
   ],
   "links": [
@@ -2258,14 +2218,6 @@
       "IMAGE"
     ],
     [
-      146,
-      86,
-      0,
-      87,
-      0,
-      "UPSCALE_MODEL"
-    ],
-    [
       147,
       81,
       0,
@@ -2288,6 +2240,14 @@
       89,
       0,
       "IMAGE"
+    ],
+    [
+      150,
+      85,
+      0,
+      87,
+      0,
+      "UPSCALE_MODEL"
     ]
   ],
   "groups": [],
