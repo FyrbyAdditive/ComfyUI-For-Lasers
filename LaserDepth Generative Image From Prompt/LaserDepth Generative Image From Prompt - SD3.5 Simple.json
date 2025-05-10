@@ -1,0 +1,791 @@
+{
+  "id": "5b48e8d8-4ed1-46e0-ac7d-ff945a08d9bb",
+  "revision": 0,
+  "last_node_id": 63,
+  "last_link_id": 112,
+  "nodes": [
+    {
+      "id": 40,
+      "type": "CLIPTextEncode",
+      "pos": [
+        384,
+        336
+      ],
+      "size": [
+        432,
+        192
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            80
+          ]
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 53,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        480,
+        576
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            100
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -48,
+        96
+      ],
+      "size": [
+        384.760009765625,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            99
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            101,
+            102
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            53
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd3.5_large_fp8_scaled.safetensors"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "CLIPTextEncode",
+      "pos": [
+        384,
+        96
+      ],
+      "size": [
+        432,
+        192
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            21
+          ]
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a bottle with a pink and red galaxy inside it on top of a wooden table on a table in the middle of a modern kitchen with a window to the outdoors mountain range bright sun clouds forest"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        864,
+        96
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 99
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 21
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 80
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        727689065807939,
+        "randomize",
+        20,
+        4.01,
+        "euler",
+        "sgm_uniform",
+        1
+      ]
+    },
+    {
+      "id": 54,
+      "type": "MarkdownNote",
+      "pos": [
+        -45,
+        240
+      ],
+      "size": [
+        225,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "🛈 [Learn more about this workflow](https://comfyanonymous.github.io/ComfyUI_examples/sd3/#sd35)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 55,
+      "type": "DownloadAndLoadDepthAnythingV2Model",
+      "pos": [
+        1040.923583984375,
+        -38.33488464355469
+      ],
+      "size": [
+        365.566650390625,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "da_v2_model",
+          "type": "DAMODEL",
+          "links": [
+            104
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-depthanythingv2",
+        "ver": "9d7cb8c1e53b01744a75b599d3e91c93464a2d33",
+        "Node name for S&R": "DownloadAndLoadDepthAnythingV2Model"
+      },
+      "widgets_values": [
+        "depth_anything_v2_vitl_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        1743.51806640625,
+        -256.5959167480469
+      ],
+      "size": [
+        226.8000030517578,
+        46
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 105
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            107
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 59,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        1746.7838134765625,
+        68.75019836425781
+      ],
+      "size": [
+        226.8000030517578,
+        46
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 106
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 110
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            108
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 60,
+      "type": "SaveImage",
+      "pos": [
+        2030.9658203125,
+        -256.5039978027344
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 107
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Depth"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "SaveImage",
+      "pos": [
+        2033.380615234375,
+        69.39198303222656
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 108
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Image"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        1364.2984619140625,
+        -256.87274169921875
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "slot_index": 0,
+          "links": [
+            105,
+            106
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "UpscaleModelLoader",
+        "models": [
+          {
+            "name": "RealESRGAN_x4plus.pth",
+            "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+            "directory": "upscale_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "RealESRGAN_x4plus.pth"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1200,
+        96
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            103,
+            110,
+            111
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 62,
+      "type": "PreviewImage",
+      "pos": [
+        1421.5166015625,
+        228.3026580810547
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 111
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 63,
+      "type": "PreviewImage",
+      "pos": [
+        1725.2535400390625,
+        222.31903076171875
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 112
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 56,
+      "type": "DepthAnything_V2",
+      "pos": [
+        1538.2894287109375,
+        75.69152069091797
+      ],
+      "size": [
+        156.76666259765625,
+        46
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "da_model",
+          "type": "DAMODEL",
+          "link": 104
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            109,
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-depthanythingv2",
+        "ver": "9d7cb8c1e53b01744a75b599d3e91c93464a2d33",
+        "Node name for S&R": "DepthAnything_V2"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      21,
+      16,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      53,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      80,
+      40,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      99,
+      4,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      100,
+      53,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      101,
+      4,
+      1,
+      16,
+      0,
+      "CLIP"
+    ],
+    [
+      102,
+      4,
+      1,
+      40,
+      0,
+      "CLIP"
+    ],
+    [
+      103,
+      8,
+      0,
+      56,
+      1,
+      "IMAGE"
+    ],
+    [
+      104,
+      55,
+      0,
+      56,
+      0,
+      "DAMODEL"
+    ],
+    [
+      105,
+      57,
+      0,
+      58,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      106,
+      57,
+      0,
+      59,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      107,
+      58,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      108,
+      59,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      109,
+      56,
+      0,
+      58,
+      1,
+      "IMAGE"
+    ],
+    [
+      110,
+      8,
+      0,
+      59,
+      1,
+      "IMAGE"
+    ],
+    [
+      111,
+      8,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      112,
+      56,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.14,
+      "offset": [
+        -996.2209005765287,
+        74.29484621785244
+      ]
+    },
+    "frontendVersion": "1.18.9"
+  },
+  "version": 0.4
+}
