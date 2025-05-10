@@ -1,8 +1,8 @@
 {
   "id": "511ae97c-47a7-4c87-86f7-4ad87d53c7ef",
   "revision": 0,
-  "last_node_id": 38,
-  "last_link_id": 77,
+  "last_node_id": 40,
+  "last_link_id": 79,
   "nodes": [
     {
       "id": 27,
@@ -38,86 +38,6 @@
       ]
     },
     {
-      "id": 34,
-      "type": "PreviewImage",
-      "pos": [
-        2274.50830078125,
-        149.73863220214844
-      ],
-      "size": [
-        140,
-        246.00003051757812
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 63
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 26,
-      "type": "MarigoldDepthEstimation_v2",
-      "pos": [
-        1946.9906005859375,
-        149.8330535888672
-      ],
-      "size": [
-        280.6666564941406,
-        246
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "marigold_model",
-          "type": "MARIGOLDMODEL",
-          "link": 50
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 76
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            63
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-marigold",
-        "ver": "1894ff2fd35c22f96c701067729237168b5f2ef5",
-        "Node name for S&R": "MarigoldDepthEstimation_v2"
-      },
-      "widgets_values": [
-        187936792103601,
-        "randomize",
-        4,
-        3,
-        768,
-        "LCMScheduler",
-        false,
-        false
-      ]
-    },
-    {
       "id": 35,
       "type": "LoadRembgByBiRefNetModel",
       "pos": [
@@ -142,147 +62,16 @@
         }
       ],
       "properties": {
-        "aux_id": "lldacing/ComfyUI_BiRefNet_ll",
+        "cnr_id": "comfyui_birefnet_ll",
         "ver": "2e16e4bbe4676bf1631c47b129cb1e6269b18e09",
-        "Node name for S&R": "LoadRembgByBiRefNetModel"
+        "Node name for S&R": "LoadRembgByBiRefNetModel",
+        "aux_id": "lldacing/ComfyUI_BiRefNet_ll"
       },
       "widgets_values": [
         "BiRefNet-ep480.pth",
         "AUTO",
         false,
         "float32"
-      ]
-    },
-    {
-      "id": 36,
-      "type": "RembgByBiRefNet",
-      "pos": [
-        1161.41162109375,
-        259.5896301269531
-      ],
-      "size": [
-        157.43333435058594,
-        46
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "BIREFNET",
-          "link": 64
-        },
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 65
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            71,
-            74
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": [
-            72,
-            75
-          ]
-        }
-      ],
-      "properties": {
-        "aux_id": "lldacing/ComfyUI_BiRefNet_ll",
-        "ver": "2e16e4bbe4676bf1631c47b129cb1e6269b18e09",
-        "Node name for S&R": "RembgByBiRefNet"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 37,
-      "type": "PreviewImage",
-      "pos": [
-        1400.7550048828125,
-        -111.71056365966797
-      ],
-      "size": [
-        140,
-        246.00003051757812
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 71
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 38,
-      "type": "ImageCompositeMasked",
-      "pos": [
-        1663.070556640625,
-        240.68304443359375
-      ],
-      "size": [
-        270,
-        146
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "destination",
-          "type": "IMAGE",
-          "link": 73
-        },
-        {
-          "name": "source",
-          "type": "IMAGE",
-          "link": 74
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": 75
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            76
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.33",
-        "Node name for S&R": "ImageCompositeMasked"
-      },
-      "widgets_values": [
-        0,
-        0,
-        false
       ]
     },
     {
@@ -415,6 +204,221 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 38,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1642.1339111328125,
+        241.48829650878906
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 73
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 74
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            76
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33",
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 26,
+      "type": "MarigoldDepthEstimation_v2",
+      "pos": [
+        1946.9906005859375,
+        149.8330535888672
+      ],
+      "size": [
+        280.6666564941406,
+        246
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "marigold_model",
+          "type": "MARIGOLDMODEL",
+          "link": 50
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            78
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-marigold",
+        "ver": "1894ff2fd35c22f96c701067729237168b5f2ef5",
+        "Node name for S&R": "MarigoldDepthEstimation_v2"
+      },
+      "widgets_values": [
+        125351940435958,
+        "randomize",
+        4,
+        3,
+        768,
+        "LCMScheduler",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 39,
+      "type": "SaveImage",
+      "pos": [
+        2363.157470703125,
+        151.83058166503906
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 78
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Depth"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "RembgByBiRefNet",
+      "pos": [
+        1161.41162109375,
+        259.5896301269531
+      ],
+      "size": [
+        157.43333435058594,
+        46
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BIREFNET",
+          "link": 64
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            74,
+            79
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            72,
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_birefnet_ll",
+        "ver": "2e16e4bbe4676bf1631c47b129cb1e6269b18e09",
+        "Node name for S&R": "RembgByBiRefNet",
+        "aux_id": "lldacing/ComfyUI_BiRefNet_ll"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 40,
+      "type": "SaveImage",
+      "pos": [
+        2363.07861328125,
+        -191.65228271484375
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 79
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.33"
+      },
+      "widgets_values": [
+        "LaserDepth-Image"
+      ]
     }
   ],
   "links": [
@@ -435,14 +439,6 @@
       "MARIGOLDMODEL"
     ],
     [
-      63,
-      26,
-      0,
-      34,
-      0,
-      "IMAGE"
-    ],
-    [
       64,
       35,
       0,
@@ -456,14 +452,6 @@
       0,
       36,
       1,
-      "IMAGE"
-    ],
-    [
-      71,
-      36,
-      0,
-      37,
-      0,
       "IMAGE"
     ],
     [
@@ -504,6 +492,22 @@
       0,
       26,
       1,
+      "IMAGE"
+    ],
+    [
+      78,
+      26,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      36,
+      0,
+      40,
+      0,
       "IMAGE"
     ]
   ],
